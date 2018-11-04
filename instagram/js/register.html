@@ -1,0 +1,109 @@
+<?php
+error_reporting(~E_NOTICE);
+require_once("dbconn.php");
+ob_start();
+if(isset($_POST['register']))
+{
+$fname=trim($_POST['fname']);
+$lname=trim($_POST['lname']);
+$fullname=trim($_POST['fullname']);
+$email=trim($_POST['email']);
+$password=trim($_POST['password']);
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+if(empty($fname))
+{
+$_SESSION['message']="First name is required";
+}
+else if(empty($lname))
+{
+$_SESSION['message']="Last message is required";
+}
+else if(empty($fullname))
+{
+$_SESSION['message']="Enter your full name";
+}
+else if(empty($email))
+{
+$_SESSION['message']="E-mail adress is required";
+}
+else if(empty($password))
+{
+$_SESSION['message']="Password is required";
+}
+else if(strlen($password < 5))
+{
+$_SESSION['message']="Password is weak";
+}
+else if(strlen($password > 5))
+{
+$_SESSION['message']="Password is ok";
+}
+}
+$sth=$conn->prepare("INSERT INTO REGISTER(fname,lname,fullname,email,password)VALUES(?,?,?,?,?)");
+$sth->bindparam(1,$fname,PDO::PARAM_STR);
+$sth->bindparam(2,$lname,PDO::PARAM_STR);
+$sth->bindparam(3,$fullname,PDO::PARAM_STR);
+$sth->bindparam(4,$email,PDO::PARAM_STR);
+$sth->bindparam(5,$password,PDO::PARAM_STR);
+if($sth->execute())
+{
+$_SESSION['message']="M104 registration done";
+}
+else
+}
+$_SESSION['message']="M105 ERROR OCCURED";
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="/style.css">
+<style>
+#ww{
+position:relative;
+top:100px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-sm-6 col-sm-push-3" id="ww">
+<label class="control-label">FIRST NAME:</label>
+<div class="form-group">
+<input type="text" class="form-control" name="fname" required />
+    </div>
+<label class="control-label">LAST NAME:</label>
+<div class="form-group">
+<input type="text" class="form-control" name="lname" required />
+</div>
+<label class="control-label">FULL NAME:</label>
+<div class="form-group">
+<input type="text" class="form-control" name="fullname" required />
+</div>
+<label class="control-label">E-MAIL:</label>
+<div class="form-group">
+<input type="email" class="form-control" name="email" required />
+</div>
+<label class="control-label">PASSWORD:</label>
+<div class="form-group">
+<input type="password" class="form-control" name="password" required />
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-default" name="register">
+<span class="glyphicon glyphicon-log-in">
+</span>
+</button>
+
+</div> 
+
+        

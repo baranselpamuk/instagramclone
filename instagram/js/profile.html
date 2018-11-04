@@ -1,0 +1,86 @@
+<?php
+error_reporting(~E_NOTICE);
+require_once('dbconnect.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="/style.css">
+<style>
+body{
+    background:#F6F6F6;   
+}
+
+#button{
+position:relative;
+top:70px;
+left:20px;
+}
+
+#cg{
+position:relative;
+top:70px;
+left:20px;
+}
+.avatar4{
+	position:relative;
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+    border-radius: 200%;
+	float:left;
+}
+
+.p{
+position:relative;
+top:90px;
+left:1px;
+}
+</style>
+</head>
+<body>  
+<div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-default" >
+                <div class="container-fluid" style="background-color:#ff;height:10%;">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><i>Instagram</i></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span></a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-heart"></span></a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+			</div>
+			<div class="container">
+<div class="row">
+<img src="images/chuoni.jpg" alt="Avatar" class="avatar4">
+<div class="col-lg-6">
+<a href="edit.php" ><button class="btn btn-default" id="button" style="width:100px;
+height:40px;"> <b>Edit Profile</b></button></a>
+<a href="setting.php"><span class="glyphicon glyphicon-cog" id="cg"></a></span>
+</div>
+<div class="col-sm-6">
+<p class="p"><a href="post.php">0 posts </a>&nbsp;&nbsp;&nbsp;
+<a href="follower.php">1 follower</a>&nbsp;&nbsp;&nbsp;<a href="following.php">100 following</a></p>
+</div>
+
+			

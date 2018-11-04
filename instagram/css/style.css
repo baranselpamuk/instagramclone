@@ -1,0 +1,222 @@
+/*
+Theme Name: Anim
+Theme URI: http://wp-themes.com/Anim
+Author: Debashis Sinha
+Author URI: http://debashisufo.blogspot.com
+Description: Anim is a powerful blog theme that provides a fast way for bloger to create an awesome blog website. 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: anim
+Tags: light, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-colors,  featured-images, sticky-post, theme-options, threaded-comments.
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+body{
+    background:#F6F6F6;   
+}
+a{
+    color: #BA6443;
+    opacity: .8;
+}
+a:hover
+{
+    color: #D2D37E;
+    text-decoration: none;
+}
+.des
+{
+    color:  #BA6443;
+    text-align: center;
+    margin-top: -10px;
+}
+.container{
+    background: #F6F6F6;
+    margin-bottom: 20px;
+}
+.content .col-md-8{
+    background: #FFF;
+}
+
+.content
+{
+    background: #FFF;
+}
+.exertpt
+{
+    text-indent: 30px;
+}
+.col-md-8 > h3
+{
+    padding-left: 15px;
+    margin-top: 25px;
+    text-align: center;
+    opacity: .8;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.col-md-8 > p
+{
+    padding-left: 12px;
+    text-align: center;
+    opacity: .7;
+    font-size: 12px;
+}
+
+.content_area
+{
+    background: #FFFFFF;
+    margin-top: 20px;
+}
+
+.content_area > h3
+{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.content_area > ul
+{
+    float: right;
+}
+
+.content_area > ul > li
+{
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.row > p
+{
+    opacity: .8;
+    font-size: 12px;
+}
+.date
+{
+    color: #BA6443;
+    font-size: 11px;
+    margin-top: 5px;
+    
+}
+.content_area > p > a
+{
+    text-transform: uppercase;
+}
+
+.widget
+{
+    background: #FFFFFF;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.widget > h3
+{
+    text-align: center;
+    margin-top: 0px;
+}
+
+.widget > p
+{
+    font-size: 12px;
+    opacity: .8;
+}
+
+.widget > h3
+{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.widget > h4
+{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.widget > ul
+{
+    text-align: center;
+    padding: 0px;
+}
+
+.widget > ul > li
+{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #F6F6F6;
+}
+.widget > ul > li:hover
+{
+    background: #D4D37E;
+}
+
+.widget > ul > li > a >i
+{
+   text-align: center;
+    margin-top:10px; 
+}
+.me
+{
+  margin-top: 10px;
+}
+.line
+{
+    width: 100px;
+    height: 1px;
+    background:#D4D37E;
+    opacity: .4;
+}
+
+.button
+{
+    width: 140px;
+    height: 30px;
+    color: #BA6443;
+    background: #F6F6F6;
+    text-align: center;
+    padding-top: 5px;
+    margin: 10px auto;
+}
+
+.button > a
+{
+    padding-top: 10px;
+}
+.pagination
+{
+   margin: 0px;
+    padding-bottom: 10px;
+}
+.pagination ul
+{
+    padding-left: 15px;
+    margin-top: 20px;
+}
+.pagination ul li
+{
+    width: 45px;
+    height: 23px;
+    display: inline-block;
+    padding-right: 5px;
+    text-align: center;
+    padding: 0px;
+    background: #eee;
+}
+.pagination ul li:hover
+{
+    background: #D4D37E;
+}
+.pagination ul li a
+{
+    margin-top: 50px;
+    color:#BA6443;
+}
+.com
+{
+ width: 100px;
+    height: 100px;
+    margin-right: 0px;
+}
